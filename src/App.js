@@ -1,22 +1,15 @@
 import React, { useState } from 'react';
 import './styles/App.css';
+import PostList from './components/PostList';
 
 function App() {
-  const [value, setValue] = useState('TEXT IN INPUT');
+  const [posts, setPosts] = useState([
+    {id:1, title: 'JS', body: 'Description'}
+  ])
 
   return (
     <div className="App">
-      <div className='post'>
-        <div className='post__content'>
-          <strong> 1. JS </strong>
-          <div>
-            JS JS JS
-          </div>
-        </div>
-        <div className='post__btns'>
-          <button> Delete button </button>
-        </div>
-      </div>
+      <PostList posts={posts} title="sdfsdfsdfs" />
     </div>
   );
 }
